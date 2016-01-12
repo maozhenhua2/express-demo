@@ -15,9 +15,14 @@ router.get('/', function (req, res, next) {
 
 // 注册
 router.get('/register', function (req, res, next) {
+  if(req.session.user){
+    res.redirect('/');
+  }
   res.render('register', {
     title: '注册',
-    user: req.session.user
+    user: req.session.user,
+    success: req.flash('success').toString(),
+    error: req.flash('error').toString()
   });
 });
 
@@ -73,6 +78,9 @@ router.post('/register', function (req, res, next) {
 // router.get('/login', checkNotLogin);
 
 router.get('/login', function (req, res, next) {
+  if(req.session.user){
+    res.redirect('/');
+  }
   res.render('login', {
     title: '登录',
     user: req.session.user,
