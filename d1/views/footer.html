@@ -1,0 +1,49 @@
+<!-- footer start -->
+
+<% if (success) { %>
+<div class="info-tip"><%= success %></div>
+<% } %>
+
+<% if (error) { %>
+<div class="info-tip"><%= error %></div>
+<!--<div class="mask-box">
+  <div class="mask"></div>
+  <div class="table">
+    <div class="msg">
+      <div>
+        <span><%= error %></span>
+        <input id="ok" type="button" value="确定">
+        <input id="cancel" type="button" value="取消">
+      </div>
+    </div>
+  </div>
+</div>-->
+<% } %>
+
+<script src="vendor/jquery.min.js"></script>
+<script>
+  $(document).ready(function () {
+    setTimeout(function () {
+      $('.mask-box').addClass('active');
+    });
+    $('#ok').on('click', function () {
+      $('.mask-box').removeClass('active');
+    });
+    //    $.ajax({
+    //        url: '/',
+    //        type: 'GET'
+    //      })
+    //      .done(function(data) {
+    ////        console.log(data);
+    //      })
+  });
+</script>
+<!--<div ui-view></div>-->
+<!--<script src="vendor/angular.min.js"></script>-->
+<!--<script src="vendor/angular-ui-router.min.js"></script>-->
+<!--<script src="vendor/ng-file-upload-all.min.js"></script>-->
+<!--<script src="vendor/angular-resource.min.js"></script>-->
+<!--<script src="javascripts/state-url.js"></script>-->
+<!--<script src="javascripts/controllers.js"></script>-->
+</body>
+</html>

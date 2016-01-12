@@ -1,0 +1,24 @@
+<% include header.html %>
+
+<div>
+  <form method="post" action="/login">
+    <ol>
+      <li>
+        <label for="username">用户名</label><input type="text" name="username" id="username">
+      </li>
+      <li>
+        <label for="password">密码</label><input type="password" name="password" id="password">
+      </li>
+      <li>
+        <button type="submit">登陆</button>
+        <a href="/register">注册</a>
+      </li>
+    </ol>
+
+  </form>
+</div>
+
+<!--<a ui-sref="index">返回</a>-->
+<a href="/">返回</a>
+
+<% include footer.html %>

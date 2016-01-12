@@ -1,0 +1,39 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #efefef;
+}
+
+body,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.info-tip {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  padding: 20px;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px 1px #000;
+  animation: info-tip-animate 1s linear 3s 1 normal;
+  animation-fill-mode: forwards;
+}
+
+@keyframes info-tip-animate {
+  0% {
+    bottom: 0;
+  }
+  100% {
+    bottom: -200px;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

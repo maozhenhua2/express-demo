@@ -1,0 +1,30 @@
+<% include header.html %>
+
+<div>
+  <form method="post">
+    <ol>
+      <li>
+        <label for="username">用户账号</label><input type="text" name="username" id="username">
+      </li>
+      <li>
+        <label for="password">输入密码</label><input type="password" name="password" id="password">
+      </li>
+      <li>
+        <label for="repassword">确认密码</label><input type="password" name="repassword" id="repassword">
+      </li>
+      <li>
+        <label for="email">邮箱</label><input type="email" name="email" id="email">
+      </li>
+      <li>
+        <button type="submit">注册</button>
+        <a href="/login">登陆</a>
+      </li>
+    </ol>
+
+  </form>
+</div>
+
+<!--<a ui-sref="index">返回</a>-->
+<a href="/">返回</a>
+
+<% include footer.html %>

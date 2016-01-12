@@ -1,0 +1,30 @@
+{
+  "ErrorMessage": "",
+  "Data": [
+    {
+      "InnerId": "11a5ab8a-579f-41da-99ad-2628cc5ab5e9",
+      "CategoryId": 0,
+      "CategoryType": 0,
+      "CategoryDisplayName": "分类1"
+    },
+    {
+      "InnerId": "a099ffdd-257c-470e-a063-b047e9db0d49",
+      "CategoryId": 1,
+      "CategoryType": 0,
+      "CategoryDisplayName": "分类2"
+    },
+    {
+      "InnerId": "80a638e2-9366-49c4-8da8-f4f663368bb8",
+      "CategoryId": 2,
+      "CategoryType": 0,
+      "CategoryDisplayName": "分类3"
+    },
+    {
+      "InnerId": "99c765d5-44ad-4c3a-9d08-e11c3cccfa52",
+      "CategoryId": 3,
+      "CategoryType": 0,
+      "CategoryDisplayName": "分类4"
+    }
+  ],
+  "StatusCode": 200
+}

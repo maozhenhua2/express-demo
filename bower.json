@@ -1,0 +1,32 @@
+{
+  "name": "express1",
+  "description": "",
+  "main": "Gruntfile.js",
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.8",
+    "angular-ui-router": "~0.2.15",
+    "angular-ui-grid": "ng-grid#~3.0.7",
+    "angular-animate": "~1.4.8",
+    "angular-messages": "~1.4.8",
+    "angular-resource": "~1.4.8",
+    "angular-route": "~1.4.8",
+    "ng-file-upload": "~11.0.0",
+    "restangular": "~1.5.1",
+    "modernizr": "~3.2.0",
+    "angular-ui-utils": "ui-utils#~3.0.0",
+    "angular-sanitize": "~1.4.8",
+    "ngSanitize": "~0.0.2",
+    "me-pageloading": "~0.4.1",
+    "jquery": "1.11.3"
+  }
+}
