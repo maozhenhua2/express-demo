@@ -1,0 +1,26 @@
+.post-form{
+  dl{
+    margin: 0;
+    padding: 0;
+  }
+  dd{
+    margin: 0;
+    padding: 5px;
+    @extend %clearfix;
+  }
+  label{
+    float: left;
+    padding-right: 5px;
+  }
+  .text,
+  .textarea{
+    float: left;
+    width: 650px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding: 2px;
+  }
+  .textarea{
+    height: 10em;
+  }
+}

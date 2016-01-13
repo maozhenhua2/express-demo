@@ -1,0 +1,26 @@
+<% include header.html %>
+<% include header_bar.html %>
+
+<div class="post-form">
+  <form action="/post" method="post">
+    <dl>
+      <dd>
+        <label for="title">标题</label>
+        <input class="text" type="text" name="title" id="title">
+      </dd>
+      <dd>
+        <label for="post">内容</label>
+        <textarea class="textarea" name="post" id="post"></textarea>
+      </dd>
+      <dd>
+        <input type="submit" value="发表">
+      </dd>
+      <dd>
+        <a href="/">返回</a>
+      </dd>
+    </dl>
+  </form>
+</div>
+
+
+<% include footer.html %>

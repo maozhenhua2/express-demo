@@ -1,0 +1,17 @@
+<% if(user){ %>
+<a href="/post">发表</a>
+<div>
+  <% posts.forEach(function (post, index) { %>
+  <p><h2><a><%= post._doc.title %></a></h2></p>
+  <p class="info">
+    作者：<a><%= post._doc.name %></a>
+
+    <% if (post._doc.time) { %>
+    | 日期：<%= post._doc.time.minute %>
+    <% } %>
+
+  </p>
+  <p><%- post._doc.post %></p>
+  <% }) %>
+</div>
+<% }%>

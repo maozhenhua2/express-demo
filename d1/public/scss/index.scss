@@ -6,8 +6,22 @@
   box-sizing: border-box;
 }
 
+%clearfix {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+    overflow: hidden;
+  }
+}
+
 body {
   background-color: #efefef;
+  font-size: 16px;
+  font-family: "微软雅黑";
 }
 body,
 p{
@@ -36,6 +50,8 @@ p{
     bottom: -200px;
   }
 }
-
-
+// 头部登陆状态
+@import "header_bar";
+// 发表post
+@import "post";
 //@import "maskBox";

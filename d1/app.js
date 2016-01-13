@@ -12,7 +12,7 @@ var MongoStore = require('connect-mongo')(session);
 var ejs = require('ejs');
 // 路由
 var routes = require('./routes/index');
-var users = require('./routes/users');
+//var users = require('./routes/users');
 // 连接数据库
 var settings = require('./settings');
 var mongoose = require('./models/db');
@@ -58,7 +58,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 // 路由控制器
 app.use('/', routes);
-app.use('/users', users);
+//app.use('/users', users);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

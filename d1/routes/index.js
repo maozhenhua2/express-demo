@@ -1,15 +1,23 @@
 var express = require('express');
 var crypto = require('crypto');
 var User = require('../models/user.js');
+var Post = require('../models/post.js');
 var router = express.Router();
 
 // 首页
 router.get('/', function (req, res, next) {
-  res.render('index', {
-    title: '首页',
-    user: req.session.user,
-    success: req.flash('success').toString(),
-    error: req.flash('error').toString()
+  Post.get(null, function (err, posts) {
+    if (err) {
+      posts = [];
+    }
+
+    res.render('index', {
+      title: '主页',
+      user: req.session.user,
+      posts: posts,
+      success: req.flash('success').toString(),
+      error: req.flash('error').toString()
+    });
   });
 });
 
@@ -81,6 +89,7 @@ router.get('/login', function (req, res, next) {
   if(req.session.user){
     res.redirect('/');
   }
+
   res.render('login', {
     title: '登录',
     user: req.session.user,
@@ -123,6 +132,29 @@ router.get('/logout', function (req, res, next) {
   req.flash('success', '登出成功!');
   console.log('success', '登出成功!');
   res.redirect('/');//登出成功后跳转到主页
+});
+
+// 发表
+router.get('/post', function (req, res, next) {
+  res.render('post', {
+    title: '发表',
+    user: req.session.user,
+    success: req.flash('success').toString(),
+    error: req.flash('error').toString()
+  });
+});
+
+router.post('/post', function (req, res) {
+  var currentUser = req.session.user,
+    post = new Post(currentUser.name, req.body.title, req.body.post);
+  post.save(function (err) {
+    if (err) {
+      req.flash('error', err);
+      return res.redirect('/');
+    }
+    req.flash('success', '发布成功!');
+    res.redirect('/');//发表成功跳转到主页
+  });
 });
 
 module.exports = router;

@@ -1,11 +1,23 @@
+@charset "UTF-8";
 *,
 *:after,
 *:before {
   box-sizing: border-box;
 }
 
+.post-form dd:before, .post-form dd:after {
+  content: "";
+  display: table;
+}
+.post-form dd:after {
+  clear: both;
+  overflow: hidden;
+}
+
 body {
   background-color: #efefef;
+  font-size: 16px;
+  font-family: "微软雅黑";
 }
 
 body,
@@ -34,6 +46,46 @@ p {
   100% {
     bottom: -200px;
   }
+}
+.HasLoginIn {
+  font-size: 0;
+  padding: 10px;
+}
+.HasLoginIn img,
+.HasLoginIn span,
+.HasLoginIn a {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 16px;
+  margin-right: 5px;
+}
+.HasLoginIn .head-img {
+  width: 48px;
+  height: 48px;
+}
+
+.post-form dl {
+  margin: 0;
+  padding: 0;
+}
+.post-form dd {
+  margin: 0;
+  padding: 5px;
+}
+.post-form label {
+  float: left;
+  padding-right: 5px;
+}
+.post-form .text,
+.post-form .textarea {
+  float: left;
+  width: 650px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  padding: 2px;
+}
+.post-form .textarea {
+  height: 10em;
 }
 
 /*# sourceMappingURL=index.css.map */
