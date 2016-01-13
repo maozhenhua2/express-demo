@@ -2,16 +2,16 @@
 <a href="/post">发表</a>
 <div>
   <% posts.forEach(function (post, index) { %>
-  <p><h2><a><%= post._doc.title %></a></h2></p>
+  <h2><a><%= post._doc.title %></a></h2>
   <p class="info">
-    作者：<a><%= post._doc.name %></a>
-
+    <span>作者：</span>
+    <a><%= post._doc.name %></a>
     <% if (post._doc.time) { %>
-    | 日期：<%= post._doc.time.minute %>
+    <span>日期：</span>
+    <%= post._doc.time.minute %>
     <% } %>
-
   </p>
-  <p><%- post._doc.post %></p>
+  <p><%= post._doc.post %></p>
   <% }) %>
 </div>
 <% }%>
